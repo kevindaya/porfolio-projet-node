@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <%- include('partials/head') %>
+  <body>
+    <%- include('partials/header') %>
+
+    <main>
+      <h1>Mes Projets</h1>
+
+      <% projets.forEach(projet => { %>
+      <div>
+        <h2><%= projet.titre %></h2>
+        <p><%= projet.description %></p>
+        <p><strong>Technologie:</strong> <%= projet.techno %></p>
+      </div>
+      <hr />
+      <% }) %>
+    </main>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>

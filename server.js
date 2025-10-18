@@ -3,6 +3,27 @@ const app = express();
 const path = require("path");
 const PORT = 3000;
 
+let projets = [
+  {
+    id: 1,
+    titre: "Application de Films et Séries",
+    description: "Regarder les dernières tendances",
+    techno: "Node.js, Express, Embeebed Javascript (EJS)",
+  },
+  {
+    id: 2,
+    titre: "Calculatrice simple",
+    description: "Additionner, Soustraire, multiplier, diviser",
+    techno: "Javascript",
+  },
+  {
+    id: 3,
+    titre: "CRUD basique",
+    description: "Créer, lire, mettre à jour, supprimer",
+    techno: "Node.js, Express",
+  },
+];
+
 //Configurer EJS
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -14,6 +35,10 @@ app.get("/", (req, res) => {
   res.render("index", { pageTitle: "Accueil" });
 });
 
+app.get("/projets", (req, res) => {
+  const id = req.params.id;
+  res.render("projets", { pageTitle: "Mes Projets", projets });
+});
 // Ecouter le PORT 3000
 
 app.listen(PORT, () => {
