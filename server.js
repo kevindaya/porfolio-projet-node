@@ -11,9 +11,8 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
 app.get("/", (req, res) => {
-  res.render("index", { title: "Accueil" });
+  res.render("index", { pageTitle: "Accueil" });
 });
-app.get("/projets");
 
 // Ecouter le PORT 3000
 

@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title%> | Portfolio</title>
-  </head>
+  <%- include ('partials/head')%>
   <body>
+    <%- include ('partials/header')%>
+
     <h1>Ndaya Heukane Kevin Gaetan</h1>
     <hr />
     <h2>Backend Developer en formation</h2>
@@ -17,5 +15,6 @@
     <a href="/projets"><button>Projets</button></a>
     <br /><br />
     <a href="/contact"><button>Contacts</button></a>
+    <%- include ('partials/footer')%>
   </body>
 </html>
