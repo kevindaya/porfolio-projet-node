@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const path = require("path");
 const PORT = 3000;
 
 //Configurer EJS
@@ -7,9 +8,10 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 //Definition des vues
+app.set("views", path.join(__dirname, "/views"));
 
 app.get("/", (req, res) => {
-  res.send("Page d'accueil");
+  res.render("index");
 });
 
 // Ecouter le PORT 3000
