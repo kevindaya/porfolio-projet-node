@@ -2,9 +2,21 @@
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  background-color: burlywood;
 }
 button {
   background-color: saddlebrown;
   border: none;
-  border-radius: 1px;
+  border-radius: 10px;
+  width: 80px;
+  height: 35px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+button:hover {
+  background-color: rgb(121, 60, 17);
 }
