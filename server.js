@@ -57,6 +57,9 @@ app.get("/contact", (req, res) => {
     ville: "Douala",
   });
 });
+app.use((req, res) => {
+  res.status(404).render("404", { pageTitle: "Erreur 404" });
+});
 // Ecouter le PORT 3000
 
 app.listen(PORT, () => {

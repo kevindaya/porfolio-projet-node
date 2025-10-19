@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= pageTitle%> | Portfolio</title>
+    <%- include ("./partials/head")%>
   </head>
   <body>
+    <%- include ("./partials/header")%>
+
     <h1><%= nom%></h1>
     <h2><%= email%></h2>
     <p>Lien vers GitHub: <b><%= github%></b></p>
@@ -14,5 +14,6 @@
       Backend Developper et Data analyst en devenir. Actuellement Etudiant en
       Informatique
     </p>
+    <%- include ("./partials/footer")%>
   </body>
 </html>
