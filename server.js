@@ -36,7 +36,6 @@ app.get("/", (req, res) => {
 });
 
 app.get("/projets", (req, res) => {
-  const id = req.params.id;
   res.render("projets", { pageTitle: "Mes Projets", projets });
 });
 app.get("/about", (req, res) => {

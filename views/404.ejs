@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <%- include ('partials/head')%>
+  <%- include('partials/head') %>
   <body>
-    <h1>Page non trouvée</h1>
-    <a href="/"><h2>Retourner à l'acceuil</h2></a>
+    <%- include('partials/header') %>
+
+    <main>
+      <h1>Page non trouvée</h1>
+      <p>Désolé, cette page n'existe pas.</p>
+      <a href="/"><button>Retourner à l'accueil</button></a>
+    </main>
+
+    <%- include('partials/footer') %>
   </body>
 </html>
