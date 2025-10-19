@@ -37,7 +37,25 @@ app.get("/", (req, res) => {
 
 app.get("/projets", (req, res) => {
   const id = req.params.id;
-  res.render("projets", { pageTitle: "Mes Projets", projets });
+  res.render("projets", { pageTitle: "Mes Projets", projets: projets });
+});
+app.get("/about", (req, res) => {
+  res.render("about", {
+    pageTitle: "À Propos",
+    nom: "Ndaya Heukane Kevin Gaetan",
+    email: "ndayakevin2007@gmail.com",
+    github: "https://github.com/kevindaya",
+    ville: "Douala",
+  });
+});
+app.get("/contact", (req, res) => {
+  res.render("contact", {
+    pageTitle: "Contact",
+    nom: "Ndaya Heukane Kevin Gaetan",
+    email: "ndayakevin2007@gmail.com",
+    github: "https://github.com/kevindaya",
+    ville: "Douala",
+  });
 });
 // Ecouter le PORT 3000
 
