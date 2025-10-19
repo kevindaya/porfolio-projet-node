@@ -32,7 +32,9 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
 app.get("/", (req, res) => {
-  res.render("index", { pageTitle: "Accueil" });
+  res.render("index", {
+    pageTitle: "Accueil",
+  });
 });
 
 app.get("/projets", (req, res) => {
